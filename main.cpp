@@ -36,7 +36,9 @@ int main() {
 //    std::cout<<"bubbleSort n1: ";
     v1.selecionSort(0,v1.size());
     v1.printV();
-
+    int a=10;int b=20;
+    std::swap(a,b);
+    std::cout<<a<<" "<<b;
 
     return 0;
 }
