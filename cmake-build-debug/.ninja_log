@@ -1,0 +1,22 @@
+# ninja log v5
+4	915	6828584460174957	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+18	805	6828583782239369	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+916	1158	6828584462566720	DSA_impl.exe	523f84140baccc2b
+6	858	6828584813414439	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+23	895	6828584813774351	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+895	1093	6828584815684339	DSA_impl.exe	523f84140baccc2b
+5	791	6828586176789604	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+791	987	6828586178682368	DSA_impl.exe	523f84140baccc2b
+4	818	6828596296971287	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+5	784	6828596691105984	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+5	844	6828597247018966	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+6	877	6828605016097735	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+17	912	6828605016427734	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+912	1127	6828605018537777	DSA_impl.exe	523f84140baccc2b
+15	777	6828605932781516	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+4	803	6828605933029713	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+803	994	6828605934886124	DSA_impl.exe	523f84140baccc2b
+21	951	6828613627910479	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+4	822	6828705235148421	CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj	273c082467629fd7
+17	849	6828705235418925	CMakeFiles/DSA_impl.dir/main.cpp.obj	48c52dec3d612681
+849	1078	6828705237658464	DSA_impl.exe	523f84140baccc2b
