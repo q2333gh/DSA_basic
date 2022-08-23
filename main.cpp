@@ -31,16 +31,22 @@ int main(int argc,char *argv[]) {
     std::cout<<"try find 0,pos(max rank) : "<<v1.find(0,0,4)<<"  get via pos: "<<v1[v1.find(0,0,4)]<<std::endl;
 //    v1.increase(v1);
 //    std::cout<<"+1 v1:";v1.printV();
-    std::cout<<"disoredred n: "<<v1.disordered();
+    std::cout<<"disoredred n: "<<v1.disordered()<<"\n";
 //    v1.bubbleSort(0,v1.size());
 //    std::cout<<"bubbleSort n1: ";
     v1.selecionSort(0,v1.size());
     v1.printV();
     int a=10;int b=20;
-    std::swap(a,b);
-    std::cout<<a<<" "<<b;
+    v1.swap(a,b);
+    std::cout<<a<<" "<<b<<"\n"<<"swap: \n";
+    v1.swap(v1[0],v1[1]);
+    v1.printV();
+    for (int i = 0; i < 5; i++) {
+        v1.insert(0, rand()%10);
+    }
+    v1.mergeSort(0,v1.size());
+    v1.printV();
 
-    std::cout<<arg
 
     return 0;
 }

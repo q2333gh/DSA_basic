@@ -1,10 +1,4 @@
 C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Dev/Clion2021.3.2/bin/ninja/win/ninja.exe -G Ninja C:\Code\C++\DSA_impl
-CMake Error at CMakeLists.txt:9 (add_subdirectory):
-  add_subdirectory not given a binary directory but the given source
-  directory "C:/Code/googletest" is not a subdirectory of
-  "C:/Code/C++/DSA_impl".  When specifying an out-of-tree source a binary
-  directory must be explicitly specified.
-
-
--- Configuring incomplete, errors occurred!
-See also "C:/Code/C++/DSA_impl/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Code/C++/DSA_impl/cmake-build-debug

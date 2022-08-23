@@ -32,7 +32,6 @@ public:
 
     Rank size() { return _size; }
 
-
     void expand() {
         if (_size < _capacity) return;
         if (_capacity < DEFAULT_CAPACITY) _capacity = DEFAULT_CAPACITY;
@@ -95,7 +94,7 @@ public:
         return -1;
     }
 
-    int disordered() const {
+    auto disordered() const {
         int n = 0;
         for (int i = 1; i < _size; i++) {
             if (_elem[i - 1] > _elem[i]) {
@@ -122,6 +121,9 @@ public:
     }
 
     void swap(T &a, T &b) {
+        if (a == b) {
+            return;
+        }
         T tmp = a;
         a = b;
         b = tmp;
@@ -131,6 +133,29 @@ public:
         while (lo < hi--) {
             swap(_elem[maxItem(lo, hi)], _elem[hi]);
         }
+    }
+
+    void merge(Rank lo, Rank mi, Rank hi) {
+        Rank i = 0;
+        T *A = _elem + lo;
+        Rank j = 0, lb = mi - lo;
+        T *B = new T[lb]; //前子向量B[0, lb) <-- _elem[lo, mi)
+        for (Rank i = 0; i < lb; i++) B[i] = A[i]; //复制自A的前缀
+        Rank k = 0, lc = hi - mi;
+        T *C = _elem + mi; //后子向量C[0, lc) = _elem[mi, hi)，就地
+        while ((j < lb) && (k < lc)) //反复地比较B、C的首元素
+            A[i++] = (B[j] <= C[k]) ? B[j++] : C[k++]; //将更小者归入A中
+        while (j < lb) //若C先耗尽，则
+            A[i++] = B[j++]; //将B残余的后缀归入A中——若B先耗尽呢？
+        delete[] B; //释放临时空间：mergeSort()过程中，如何避免此类反复的new/delete？
+    }
+
+    void mergeSort(Rank lo, Rank hi) {//归并排序
+        if (hi - lo < 2) return;
+        int mi = (lo + hi) / 2;
+        mergeSort(lo, mi);
+        mergeSort(mi, hi);
+        merge(lo, mi, hi);
     }
 
 //    int deduplicate(){
