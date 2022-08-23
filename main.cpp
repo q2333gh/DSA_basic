@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "Vector/Vector.h"
-int main() {
+int main(int argc,char *argv[]) {
     srand((unsigned)time(nullptr));
     std::cout << "Hello, Vector!" << std::endl;
     Vector<int> v1(0,0,0);
@@ -39,6 +39,8 @@ int main() {
     int a=10;int b=20;
     std::swap(a,b);
     std::cout<<a<<" "<<b;
+
+    std::cout<<arg
 
     return 0;
 }
