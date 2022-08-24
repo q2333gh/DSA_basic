@@ -77,17 +77,10 @@ public:
         std::cout << "\n";
     }
 
+    ListNodePosi<T> getLast() { return trailer->pred; }
 
-    ListNodePosi<T> getLast() {
-        return trailer->pred;
-    }
-
-    ListNodePosi<T> getFirst() {
-        return header->succ;
-    }
-
+    ListNodePosi<T> getFirst() { return header->succ; }
 
 };
-
 
 #endif //DSA_IMPL_LIST_CPP
