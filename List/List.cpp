@@ -6,6 +6,7 @@
 #define DSA_IMPL_LIST_CPP
 
 #include "ListNode.cpp"
+#include "iostream"
 
 template<typename T>
 class List {

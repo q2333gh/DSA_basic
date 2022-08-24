@@ -2,13 +2,17 @@
 // Created by 白桃乌龙 on 2022/8/22.23334
 
 //
-#include <iostream>
+
 
 #ifndef DSA_IMPL_VECTOR_H
 #define DSA_IMPL_VECTOR_H
 
-using Rank = int;
+
+#include <iostream>
+
 #define DEFAULT_CAPACITY 8
+using Rank = int;
+
 
 template<typename T>
 struct Increase {
@@ -157,15 +161,16 @@ public:
         merge(lo, mi, hi);
     }
 
-    Rank binSearch(T* S ,T const& e,Rank lo,Rank hi){
-        while (lo<hi){
-            Rank mi =(hi+lo)>>1;
-            (e<S[mi])?hi=mi:lo=mi+1;
+    Rank binSearch(T *S, T const &e, Rank lo, Rank hi) {
+        while (lo < hi) {
+            Rank mi = (hi + lo) >> 1;
+            (e < S[mi]) ? hi = mi : lo = mi + 1;
         }
-        return lo-1;
+        return lo - 1;
     }
-    Rank search(T const &e ,Rank lo,Rank hi){
-        return binSearch(_elem,e,lo,hi);
+
+    Rank search(T const &e, Rank lo, Rank hi) {
+        return binSearch(_elem, e, lo, hi);
     }
 
 
