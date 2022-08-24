@@ -3,7 +3,7 @@ project(DSA_impl)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(DSA_impl main.cpp Vector/Vector.cpp Vector/Vector.h List/ListNode.cpp List/ListNode.h)
+add_executable(DSA_impl main.cpp Vector/Vector.cpp List/ListNode.cpp)
 
 # 添加头文件
 include_directories(
@@ -22,11 +22,9 @@ link_directories(
 
 set(SOUCE_FLIES
         main.cpp
-        Vector/vector.cpp
-        Vector/vector.h
+        Vector/Vector.cpp
         List/ListNode.cpp
-        List/ListNode.h
-        List/List.cpp List/List.h)
+        List/List.cpp)
 
 # 指定可执行文件的生成位置
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")

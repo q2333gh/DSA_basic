@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "Vector/Vector.h"
+#include "Vector/Vector.cpp"
 #include "googletest/googletest/include/gtest/gtest.h"
 
-#include "List/ListNode.h"
-#include "List/List.h"
+#include "List/ListNode.cpp"
+#include "List/List.cpp"
 
 int size=100000;
 
