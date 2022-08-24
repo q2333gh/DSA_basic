@@ -1,0 +1,32 @@
+//
+// Created by 白桃乌龙 on 2022/8/23.
+//
+
+#ifndef DSA_IMPL_LISTNODE_H
+#define DSA_IMPL_LISTNODE_H
+
+using Rank = int;
+template<typename T> struct ListNode;
+template<typename T> using ListNodePosi=ListNode<T>*;
+template<typename T>
+struct ListNode {
+    T data;
+    ListNodePosi<T> pred;
+    ListNodePosi<T> succ;
+    ListNode()= default;
+    explicit ListNode(T e, ListNodePosi<T> p = nullptr, ListNodePosi<T> s = nullptr)
+        :data(e),pred(p),succ(s){}
+    ListNodePosi<T> insertAsPred(T const& e){
+        auto x=new ListNode(e,this,pred);
+        pred->succ=x;pred=x;
+        return x;
+    }
+    ListNodePosi<T> insertAsSucc(T const& e){
+        auto x=new ListNode(e,this,succ);
+        succ->pred=x;succ=x;
+        return x;
+    }
+};
+
+
+#endif //DSA_IMPL_LISTNODE_H

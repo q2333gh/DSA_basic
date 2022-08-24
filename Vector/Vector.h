@@ -23,6 +23,7 @@ protected:
     T *_elem;
 
 public:
+    T &operator[](Rank r) { return _elem[r]; }
 
     explicit //c,capacity ; s,size ; v,elem
     Vector(int c = DEFAULT_CAPACITY, int s = 0, T v = 0) {
@@ -76,8 +77,6 @@ public:
     }
 
 
-    T &operator[](Rank r) { return _elem[r]; }
-
     void printV() {
         for (int i = 0; i < _size; ++i) {
             std::cout << _elem[i] << " ";
@@ -129,7 +128,7 @@ public:
         b = tmp;
     }
 
-    void selecionSort(Rank lo, Rank hi) {
+    void selectionSort(Rank lo, Rank hi) {
         while (lo < hi--) {
             swap(_elem[maxItem(lo, hi)], _elem[hi]);
         }
@@ -158,10 +157,23 @@ public:
         merge(lo, mi, hi);
     }
 
+    Rank binSearch(T* S ,T const& e,Rank lo,Rank hi){
+        while (lo<hi){
+            Rank mi =(hi+lo)>>1;
+            (e<S[mi])?hi=mi:lo=mi+1;
+        }
+        return lo-1;
+    }
+    Rank search(T const &e ,Rank lo,Rank hi){
+        return binSearch(_elem,e,lo,hi);
+    }
+
+
 //    int deduplicate(){
 //        int oldSize=_size;
 //        Rank i =
 //    }
+
 };
 
 #endif //DSA_IMPL_VECTOR_H

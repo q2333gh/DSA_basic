@@ -47,23 +47,26 @@ cmake_ninja_workdir = C$:/Code/C++/DSA_impl/cmake-build-debug/
 #############################################
 # Order-only phony target for DSA_impl
 
-build cmake_object_order_depends_target_DSA_impl: phony || CMakeFiles/DSA_impl.dir
+build cmake_object_order_depends_target_DSA_impl: phony || cmake_object_order_depends_target_gtest
 
 build CMakeFiles/DSA_impl.dir/main.cpp.obj: CXX_COMPILER__DSA_impl_Debug C$:/Code/C++/DSA_impl/main.cpp || cmake_object_order_depends_target_DSA_impl
   DEP_FILE = CMakeFiles\DSA_impl.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
   OBJECT_DIR = CMakeFiles\DSA_impl.dir
   OBJECT_FILE_DIR = CMakeFiles\DSA_impl.dir
 
 build CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj: CXX_COMPILER__DSA_impl_Debug C$:/Code/C++/DSA_impl/Vector/Vector.cpp || cmake_object_order_depends_target_DSA_impl
   DEP_FILE = CMakeFiles\DSA_impl.dir\Vector\Vector.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
   OBJECT_DIR = CMakeFiles\DSA_impl.dir
   OBJECT_FILE_DIR = CMakeFiles\DSA_impl.dir\Vector
 
-build CMakeFiles/DSA_impl.dir/List/List.cpp.obj: CXX_COMPILER__DSA_impl_Debug C$:/Code/C++/DSA_impl/List/List.cpp || cmake_object_order_depends_target_DSA_impl
-  DEP_FILE = CMakeFiles\DSA_impl.dir\List\List.cpp.obj.d
+build CMakeFiles/DSA_impl.dir/List/ListNode.cpp.obj: CXX_COMPILER__DSA_impl_Debug C$:/Code/C++/DSA_impl/List/ListNode.cpp || cmake_object_order_depends_target_DSA_impl
+  DEP_FILE = CMakeFiles\DSA_impl.dir\List\ListNode.cpp.obj.d
   FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
   OBJECT_DIR = CMakeFiles\DSA_impl.dir
   OBJECT_FILE_DIR = CMakeFiles\DSA_impl.dir\List
 
@@ -75,15 +78,95 @@ build CMakeFiles/DSA_impl.dir/List/List.cpp.obj: CXX_COMPILER__DSA_impl_Debug C$
 #############################################
 # Link the executable DSA_impl.exe
 
-build DSA_impl.exe: CXX_EXECUTABLE_LINKER__DSA_impl_Debug CMakeFiles/DSA_impl.dir/main.cpp.obj CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj CMakeFiles/DSA_impl.dir/List/List.cpp.obj
+build DSA_impl.exe: CXX_EXECUTABLE_LINKER__DSA_impl_Debug CMakeFiles/DSA_impl.dir/main.cpp.obj CMakeFiles/DSA_impl.dir/Vector/Vector.cpp.obj CMakeFiles/DSA_impl.dir/List/ListNode.cpp.obj | lib/libgtest.a || lib/libgtest.a
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DSA_impl.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = DSA_impl.exe
   TARGET_IMPLIB = libDSA_impl.dll.a
   TARGET_PDB = DSA_impl.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target TestAdd
+
+
+#############################################
+# Order-only phony target for TestAdd
+
+build cmake_object_order_depends_target_TestAdd: phony || CMakeFiles/TestAdd.dir
+
+build CMakeFiles/TestAdd.dir/main.cpp.obj: CXX_COMPILER__TestAdd_Debug C$:/Code/C++/DSA_impl/main.cpp || cmake_object_order_depends_target_TestAdd
+  DEP_FILE = CMakeFiles\TestAdd.dir\main.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include
+  OBJECT_DIR = CMakeFiles\TestAdd.dir
+  OBJECT_FILE_DIR = CMakeFiles\TestAdd.dir
+
+build CMakeFiles/TestAdd.dir/Vector/Vector.cpp.obj: CXX_COMPILER__TestAdd_Debug C$:/Code/C++/DSA_impl/Vector/Vector.cpp || cmake_object_order_depends_target_TestAdd
+  DEP_FILE = CMakeFiles\TestAdd.dir\Vector\Vector.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include
+  OBJECT_DIR = CMakeFiles\TestAdd.dir
+  OBJECT_FILE_DIR = CMakeFiles\TestAdd.dir\Vector
+
+build CMakeFiles/TestAdd.dir/List/ListNode.cpp.obj: CXX_COMPILER__TestAdd_Debug C$:/Code/C++/DSA_impl/List/ListNode.cpp || cmake_object_order_depends_target_TestAdd
+  DEP_FILE = CMakeFiles\TestAdd.dir\List\ListNode.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include
+  OBJECT_DIR = CMakeFiles\TestAdd.dir
+  OBJECT_FILE_DIR = CMakeFiles\TestAdd.dir\List
+
+build CMakeFiles/TestAdd.dir/List/List.cpp.obj: CXX_COMPILER__TestAdd_Debug C$:/Code/C++/DSA_impl/List/List.cpp || cmake_object_order_depends_target_TestAdd
+  DEP_FILE = CMakeFiles\TestAdd.dir\List\List.cpp.obj.d
+  FLAGS = -g -std=gnu++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include
+  OBJECT_DIR = CMakeFiles\TestAdd.dir
+  OBJECT_FILE_DIR = CMakeFiles\TestAdd.dir\List
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TestAdd
+
+
+#############################################
+# Link the executable ..\bin\TestAdd.exe
+
+build ../bin/TestAdd.exe: CXX_EXECUTABLE_LINKER__TestAdd_Debug CMakeFiles/TestAdd.dir/main.cpp.obj CMakeFiles/TestAdd.dir/Vector/Vector.cpp.obj CMakeFiles/TestAdd.dir/List/ListNode.cpp.obj CMakeFiles/TestAdd.dir/List/List.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_PATH = -LC:/Code/C++/DSA_impl/lib   -LC:/Code/C++/DSA_impl/googletest
+  OBJECT_DIR = CMakeFiles\TestAdd.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = ..\bin\TestAdd.exe
+  TARGET_IMPLIB = libTestAdd.dll.a
+  TARGET_PDB = TestAdd.exe.dbg
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
 
 
 #############################################
@@ -108,10 +191,386 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Code/C++/DSA_impl/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/install/local: phony googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install
+
+build googletest/CMakeFiles/install.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/install: phony googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/edit_cache: phony googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SC:\Code\C++\DSA_impl -BC:\Code\C++\DSA_impl\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/rebuild_cache: phony googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/install/strip: phony googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Code/C++/DSA_impl/googletest/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googlemock && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install/local: phony googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install
+
+build googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googlemock && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install: phony googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googlemock && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/googlemock/edit_cache: phony googletest/googlemock/CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_Debug C$:/Code/C++/DSA_impl/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googlemock/include -isystem C:/Code/C++/DSA_impl/googletest/googlemock -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
+  OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_Debug C$:/Code/C++/DSA_impl/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -IC:/Code/C++/DSA_impl/googletest/googlemock/include -IC:/Code/C++/DSA_impl/googletest/googlemock -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
+  OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = googletest\googlemock\CMakeFiles\gmock.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googlemock && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SC:\Code\C++\DSA_impl -BC:\Code\C++\DSA_impl\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/rebuild_cache: phony googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/googlemock/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googlemock && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/googlemock/install/strip: phony googletest/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Code/C++/DSA_impl/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for list_install_components
+
+build googletest/googletest/list_install_components: phony
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || googletest/googletest/CMakeFiles/gtest.dir
+
+build googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_Debug C$:/Code/C++/DSA_impl/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -IC:/Code/C++/DSA_impl/googletest/googletest/include -IC:/Code/C++/DSA_impl/googletest/googletest
+  OBJECT_DIR = googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = googletest\googletest\CMakeFiles\gtest.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_Debug C$:/Code/C++/DSA_impl/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++23
+  INCLUDES = -IC:/Code/C++/DSA_impl/include -IC:/Code/C++/DSA_impl/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest/include -isystem C:/Code/C++/DSA_impl/googletest/googletest
+  OBJECT_DIR = googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = googletest\googletest\CMakeFiles\gtest_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = googletest\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for install/local
+
+build googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install/local: phony googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install
+
+build googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install: phony googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build googletest/googletest/edit_cache: phony googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SC:\Code\C++\DSA_impl -BC:\Code\C++\DSA_impl\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build googletest/googletest/rebuild_cache: phony googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for install/strip
+
+build googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND googletest/googletest/all
+  COMMAND = cmd.exe /C "cd /D C:\Code\C++\DSA_impl\cmake-build-debug\googletest\googletest && C:\Dev\Clion2021.3.2\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build googletest/googletest/install/strip: phony googletest/googletest/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
 build DSA_impl: phony DSA_impl.exe
+
+build TestAdd: phony ../bin/TestAdd.exe
+
+build TestAdd.exe: phony ../bin/TestAdd.exe
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
 
 # =============================================================================
 # Folder targets.
@@ -121,7 +580,28 @@ build DSA_impl: phony DSA_impl.exe
 #############################################
 # Folder: C:/Code/C++/DSA_impl/cmake-build-debug
 
-build all: phony DSA_impl.exe
+build all: phony DSA_impl.exe ../bin/TestAdd.exe googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Code/C++/DSA_impl/cmake-build-debug/googletest
+
+build googletest/all: phony googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Code/C++/DSA_impl/cmake-build-debug/googletest/googlemock
+
+build googletest/googlemock/all: phony lib/libgmock_main.a lib/libgmock.a googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Code/C++/DSA_impl/cmake-build-debug/googletest/googletest
+
+build googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -130,14 +610,14 @@ build all: phony DSA_impl.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../googletest/CMakeLists.txt ../googletest/googlemock/CMakeLists.txt ../googletest/googlemock/cmake/gmock.pc.in ../googletest/googlemock/cmake/gmock_main.pc.in ../googletest/googletest/CMakeLists.txt ../googletest/googletest/cmake/Config.cmake.in ../googletest/googletest/cmake/gtest.pc.in ../googletest/googletest/cmake/gtest_main.pc.in ../googletest/googletest/cmake/internal_utils.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeDependentOption.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPython.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPython/Support.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../googletest/CMakeLists.txt ../googletest/googlemock/CMakeLists.txt ../googletest/googlemock/cmake/gmock.pc.in ../googletest/googlemock/cmake/gmock_main.pc.in ../googletest/googletest/CMakeLists.txt ../googletest/googletest/cmake/Config.cmake.in ../googletest/googletest/cmake/gtest.pc.in ../googletest/googletest/cmake/gtest_main.pc.in ../googletest/googletest/cmake/internal_utils.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeDependentOption.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeGenericSystem.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeInitializeConfigs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeLanguageInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakePackageConfigHelpers.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeRCInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInformation.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/CMakeSystemSpecificInitialize.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Compiler/GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPackageMessage.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPython.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/FindPython/Support.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/GNUInstallDirs.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-C.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU-CXX.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-GNU.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows-windres.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/Windows.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/Platform/WindowsPaths.cmake C$:/Dev/Clion2021.3.2/bin/cmake/win/share/cmake-3.21/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.21.1/CMakeCCompiler.cmake CMakeFiles/3.21.1/CMakeCXXCompiler.cmake CMakeFiles/3.21.1/CMakeRCCompiler.cmake CMakeFiles/3.21.1/CMakeSystem.cmake: phony
 
 
 #############################################

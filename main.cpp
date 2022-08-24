@@ -2,8 +2,26 @@
 #include <cstdlib>
 #include <ctime>
 #include "Vector/Vector.h"
-int main(int argc,char *argv[]) {
-    srand((unsigned)time(nullptr));
+#include "googletest/googletest/include/gtest/gtest.h"
+
+#include "List/ListNode.h"
+#include "List/List.h"
+
+int size=100000;
+
+
+TEST(TestCase,test1){
+    ASSERT_EQ(5,5);
+}
+TEST(TestCase,test2){
+    Vector<int> v2(0,0,0);
+    for (int i = 0; i < size; ++i) {
+        v2.insert(0,rand()&size);
+    }
+    v2.selectionSort(0, v2.size());
+}
+
+TEST(TestCase,test3){
     std::cout << "Hello, Vector!" << std::endl;
     Vector<int> v1(0,0,0);
     for (int i = 0; i < v1.size(); ++i) {
@@ -34,7 +52,7 @@ int main(int argc,char *argv[]) {
     std::cout<<"disoredred n: "<<v1.disordered()<<"\n";
 //    v1.bubbleSort(0,v1.size());
 //    std::cout<<"bubbleSort n1: ";
-    v1.selecionSort(0,v1.size());
+    v1.selectionSort(0, v1.size());
     v1.printV();
     int a=10;int b=20;
     v1.swap(a,b);
@@ -46,7 +64,43 @@ int main(int argc,char *argv[]) {
     }
     v1.mergeSort(0,v1.size());
     v1.printV();
+    std::cout<<"try search value :5 at pos :"<< v1.search(5,0,v1.size());
 
+}
+TEST(TestCase,test4){
+    Vector<int> v2(0,0,0);
+    for (int i = 0; i < size; ++i) {
+        v2.insert(0,rand()&size);
+    }
+    v2.selectionSort(0, v2.size());
+    std::cout<< v2.find(5000,0,v2.size());
+}
+TEST(TestCase,test5){
+    List<int> l1(2);
+    for (int i = 0; i < 20; ++i) {
+        l1.insertAsLast(rand()%10);
+    }
+    l1.printL();
+    std::cout<< l1.find(5,l1.size(),l1.getLast())<<" ";
+    std::cout<< l1.find(3,l1.size(),l1.getLast())<<" ";
+
+}
+TEST(TestCase,test6){
+    List<int> l2(2);
+    for (int i = 0; i < 20; ++i) {
+        l2.insertAsLast(i+1);
+    }
+    l2.printL();
+    std::cout<< l2.find(5,l2.size(),l2.getLast())<<" ";
+    std::cout<< l2.find(3,l2.getFirst(),l2.size())<<" ";
+
+}
+
+int main(int argc,char *argv[]) {
+    srand((unsigned)time(nullptr));
+
+    testing::InitGoogleTest(&argc,argv);
+    return RUN_ALL_TESTS();
 
     return 0;
 }
