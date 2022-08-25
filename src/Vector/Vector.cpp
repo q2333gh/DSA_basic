@@ -15,7 +15,7 @@ using Rank = int;
 
 template<typename T>
 struct Increase {
-    virtual void operator()(T &e) { e++; }
+    virtual void operator()(T & e) { e++; }
 };
 
 template<typename T>
