@@ -2,7 +2,7 @@
 
 template<typename T>
 class Stack : public Vector<T> {
- public:
+public:
   auto push(T const &e) {
 	insert(e);
   }

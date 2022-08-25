@@ -14,11 +14,11 @@ template<typename T>
 static bool lt(T &a, T &b) { return a < b; } //less than
 template<typename T>
 class List {
- private:
+private:
   int _size{};
   ListNodePosi<T> header;
   ListNodePosi<T> trailer;
- protected:
+protected:
   void init() {
 	header = new ListNode<T>;
 	trailer = new ListNode<T>;
@@ -30,10 +30,11 @@ class List {
 //        std::cout << "list inited";
   }
 
- public:
+public:
   T &operator[](Rank r) const {
 	ListNode<T> p = first();
-	while (0 < r--)p = p.succ;
+	while (0 < r--)
+	  p = p.succ;
 	return p.data;
   }
 

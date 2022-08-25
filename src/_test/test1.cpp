@@ -5,13 +5,13 @@
 #include "test1.h"
 #include <iostream>
 class base {
- protected:
+protected:
   auto ptd() { return true; }
 
- private:
+private:
   auto priv() { return true; }
 
- public:
+public:
   auto pub() {
 	for (int i = 0; i < 20; i++) {
 	  std::cout << "test";

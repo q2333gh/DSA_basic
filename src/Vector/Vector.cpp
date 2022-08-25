@@ -17,11 +17,11 @@ struct Increase {
 
 template<typename T>
 class Vector {
- protected:
+protected:
   Rank _size;
   int _capacity;
   T *_elem;
- public:
+public:
   T &operator[](Rank r) { return _elem[r]; }
 
   explicit //c,capacity ; s,size ; v,elem
@@ -33,11 +33,14 @@ class Vector {
   Rank size() { return _size; }
 
   void expand() {
-	if (_size < _capacity) return;
-	if (_capacity < DEFAULT_CAPACITY) _capacity = DEFAULT_CAPACITY;
+	if (_size < _capacity)
+	  return;
+	if (_capacity < DEFAULT_CAPACITY)
+	  _capacity = DEFAULT_CAPACITY;
 	T *oldElem = _elem;
 	_elem = new T[_capacity <<= 1];
-	for (int i = 0; i < _size; i++) _elem[i] = oldElem[i];
+	for (int i = 0; i < _size; i++)
+	  _elem[i] = oldElem[i];
 	std::cout << "expand to : " << _size << " ";
 	delete[] oldElem;
   }
@@ -56,8 +59,10 @@ class Vector {
   }
 
   int remove(Rank lo, Rank hi) {
-	if (lo == hi) return 0;
-	while (hi < _size)_elem[lo++] = _elem[hi++];
+	if (lo == hi)
+	  return 0;
+	while (hi < _size)
+	  _elem[lo++] = _elem[hi++];
 	_size = lo;
 	return hi - lo;
   }
@@ -80,11 +85,9 @@ class Vector {
 	  visit(_elem[i]);
 	}
   }
-
   void increase(Vector<T> &V) {
 	V.traverse(Increase<T>());
   }
-
   void printV() {
 	std::cout << std::endl;
 	for (int i = 0; i < _size; ++i) {
@@ -92,16 +95,15 @@ class Vector {
 	}
 	std::cout << std::endl;
   }
-
   Rank find(T const &e, Rank lo, Rank hi) {
 	while (lo < hi) {
-	  if (e == _elem[hi]) return hi;
+	  if (e == _elem[hi])
+		return hi;
 	  else
 		hi--;
 	}
 	return -1;
   }
-
   auto disordered() const {
 	int n = 0;
 	for (int i = 1; i < _size; i++) {
@@ -111,14 +113,12 @@ class Vector {
 	}
 	return n;
   }
-
   void bubbleSort(Rank lo, Rank hi) {
 	for (Rank last = --hi; lo < hi; hi = last)
 	  for (Rank i = last = lo; i < hi; i++) {
 		swap(_elem[last = i], _elem[i + 1]);
 	  }
   }
-
   Rank maxItem(Rank lo, Rank hi) {
 	Rank mx = hi;
 	while (lo < hi--) {
@@ -148,7 +148,8 @@ class Vector {
 	T *A = _elem + lo;
 	Rank j = 0, lb = mi - lo;
 	T *B = new T[lb]; //前子向量B[0, lb) <-- _elem[lo, mi)
-	for (Rank i = 0; i < lb; i++) B[i] = A[i]; //复制自A的前缀
+	for (Rank i = 0; i < lb; i++)
+	  B[i] = A[i]; //复制自A的前缀
 	Rank k = 0, lc = hi - mi;
 	T *C = _elem + mi; //后子向量C[0, lc) = _elem[mi, hi)，就地
 	while ((j < lb) && (k < lc)) //反复地比较B、C的首元素
@@ -159,7 +160,8 @@ class Vector {
   }
 
   void mergeSort(Rank lo, Rank hi) {//归并排序
-	if (hi - lo < 2) return;
+	if (hi - lo < 2)
+	  return;
 	int mi = (lo + hi) / 2;
 	mergeSort(lo, mi);
 	mergeSort(mi, hi);
