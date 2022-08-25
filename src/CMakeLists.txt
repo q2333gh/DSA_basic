@@ -9,5 +9,5 @@ add_executable(
         List/ListNode.cpp
         Stack/Stack.cpp
         Vector/Vector.cpp
-)
+        _test/test1.cpp _test/test1.h)
 

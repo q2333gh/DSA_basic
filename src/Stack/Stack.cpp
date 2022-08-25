@@ -1,25 +1,17 @@
 #include "../Vector/Vector.cpp"
+
 template<typename T>
-class Stack :public Vector<T>{
-public:
-    Stack(){
+class Stack : public Vector<T> {
+ public:
+  auto push(T const &e) {
+	insert(e);
+  }
 
-    }
-    ~Stack(){
+  auto pop() {
+	return remove(size() - 1);
+  }
 
-    }
-
-    auto empty(){
-        bool e=_size;
-        return e;
-    }
-    auto push(T const &e){
-        insert(size(),e);
-    }
-    auto pop(){
-        return remove(size()-1);
-    }
-    auto top(){
-        return (*this)[size-1];
-    }
+  auto top() {
+	return (*this)[size() - 1];
+  }
 };
