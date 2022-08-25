@@ -9,5 +9,5 @@ add_executable(
         List/ListNode.h
         Stack_via_Vector/Stack.h
         Vector/Vector.h
-         Stack_app/cast.h)
+         Stack_app/cast.h Queue/Queue.h BinTree/BinNode.cpp BinTree/BinNode.h BinTree/BinTree.cpp BinTree/BinTree.h)
 
