@@ -5,7 +5,7 @@
 #ifndef DSA_IMPL_LIST_CPP
 #define DSA_IMPL_LIST_CPP
 
-#include "ListNode.cpp"
+#include "ListNode.h"
 #include "iostream"
 
 template<typename T>

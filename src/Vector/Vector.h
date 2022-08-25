@@ -54,7 +54,7 @@ public:
 	_size++;
 	return r;
   }
-  Rank insert(T const &e) {
+  Rank insert(T const &e) {//insert as last
 	return (insert(_size, e));
   }
 

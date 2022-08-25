@@ -1,32 +1,32 @@
+#include "List/List.h"
+#include "Stack_via_Vector/Stack.h"
+#include "Stack_app/cast.h"
 #include <iostream>
-#include "List/List.cpp"
-#include "Stack/Stack.cpp"
+struct test {
+  auto t1() {
+	Stack<int> s1;
+	Stack<int> s2;
+	for (int i = 0; i < 5; i++) {
+	  s1.push(i);
+	}
+	std::cout<<"s1: if empty  "<<s1.empty();
+	std::cout<<"s2: if empty  "<<s2.empty();
+	for (int i = 0; i < 5; i++) {
+	  std::cout << s1.pop() << " ";
+	}
 
+  }
+  auto t2(){
+	cast<int> c1;
+	Vector<int> v1 = c1.toBin(5328);
+	v1.printV();
+  }
+};
 int main(int argc, char *argv[]) {
-  std::cout << "Hello, List!" << std::endl;
-  List<int> l1{};
-  for (int i = 0; i < 20; i++)
-	l1.insertAsLast(rand() % 10);
-  std::cout << "l1:\n";
-  l1.printL();
-  l1.deduplicate();
-  std::cout << "dedu_l1:\n";
-  l1.printL();
-  List<int> l2;
-  std::cout << "l2:\n";
-  for (int i = 0; i < 5; i++)
-	l2.insertAsLast(rand() % 10);
-  l2.printL();
-  List<int> l3;
-  l3.copyNodes(l2.getFirst(), l2.size());
-  std::cout << "l3 copyFrom l2 :\n";
-  l3.printL();
-  std::cout << "sel MAX: " << l3.selectMax(l3.getFirst(), l3.size())->data << "\n" << "l3 sort:\n";
-  l3.selectionSort(l3.getFirst(), l3.size());
-  l3.selectionSort();
-  l3.printL();
-  Stack<int> s1;
-  int a = 1;
-  s1.push(a);
+
+  test t;
+//  t.t1();
+t.t2();
   return 0;
 }
+
